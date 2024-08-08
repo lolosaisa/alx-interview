@@ -16,7 +16,7 @@ function makeRequest (url) {
       });
     });
   }
-  
+
   /**
    * Entry point - makes requests to Star Wars API
    * for movie info based movie ID passed as a CLI parameter.
@@ -37,6 +37,5 @@ function makeRequest (url) {
       console.log(character.name);
     }
   }
-  
+
   main();
-  
