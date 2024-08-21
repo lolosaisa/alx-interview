@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" function to get the fewest coins to make change"""
 
 def makeChange(coins, total):
     #using bottom up, initially our array can hold the largest possible value
