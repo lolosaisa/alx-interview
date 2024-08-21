@@ -2,7 +2,7 @@
 
 def makeChange(coins, total):
     #using bottom up, initially our array can hold the largest possible value
-    memo = [float(inf)]* (total+1)
+    memo = [float('inf')]* (total+1)
     
     #we need 0 coins to make the total of 0
     memo[0] = 0
@@ -12,7 +12,7 @@ def makeChange(coins, total):
         #we ae going to chechk the previous solution/ coin denomination
         for coin in coins:
             if i - coin >= 0:
-                memo[1] = min(memo[i], memo[i-coin] + 1)
+                memo[i] = min(memo[i], memo[i-coin] + 1)
                 
     #if memo[total] is infinity it means it is an impossible task            
     return memo[total] if memo[total] != float('inf')else -1
