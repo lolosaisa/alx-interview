@@ -3,8 +3,8 @@
 """Function calculates the perimeter of an island"""
 
 def island_perimeter(grid):
-    perimeter = 0;
-    rows = len(grid),
+    perimeter = 0
+    rows = len(grid)
     cols = len(grid[0])
     
     for i in range(rows):
@@ -16,7 +16,7 @@ def island_perimeter(grid):
                 #we check the neigbour cells and substract shared sides
                 if i > 0 and grid[i - j][j] == 1:
                     perimeter -= 2
-                if j> 0 grid[i][j - 1] == 1:
+                if j > 0 and grid[i][j - 1] == 1:
                     perimeter -= 2
                         
             return perimeter
