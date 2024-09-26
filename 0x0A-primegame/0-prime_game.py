@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """Module defining isWinner function."""
 
-
 def isWinner(x, nums):
-    """Function to get who has won in prime game"""
+    """Function to get who has won in prime game."""
     mariaWinsCount = 0
     benWinsCount = 0
 
@@ -17,7 +16,7 @@ def isWinner(x, nums):
 
         isMariaTurns = True
 
-        while(True):
+        while True:
             if not primesSet:
                 if isMariaTurns:
                     benWinsCount += 1
@@ -33,13 +32,12 @@ def isWinner(x, nums):
             isMariaTurns = not isMariaTurns
 
     if mariaWinsCount > benWinsCount:
-        return "Winner: Maria"
+        return "Maria"
 
     if mariaWinsCount < benWinsCount:
-        return "Winner: Ben"
+        return "Ben"
 
     return None
-
 
 def is_prime(n):
     """Returns True if n is prime, else False."""
@@ -50,8 +48,7 @@ def is_prime(n):
             return False
     return True
 
-
 def primes_in_range(start, end):
     """Returns a list of prime numbers between start and end (inclusive)."""
-    primes = [n for n in range(start, end+1) if is_prime(n)]
+    primes = [n for n in range(start, end + 1) if is_prime(n)]
     return primes
